@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+   <title>Electric Bill Calculator</title>
+</h:head>
+<h:body>
+   <h1>Electric Bill Calculator</h1>
+   <h:form>
+      <fieldset>
+        <legend>Enter the following information</legend>
+        Customer Name: <h:inputText value="#{electricCalculator.customerName}"/><br/>
+        Customer Type: <h:selectOneMenu value="#{electricCalculator.customerType}">
+          <f:selectItems value="#{electricCalculator.cusTypes}"/>
+      </h:selectOneMenu> <br/>
+        Date of Billing: <h:inputText value="#{electricCalculator.dateOfBilling}"/><br/>
+        Previouse Reading (in kWh): <h:inputText value="#{electricCalculator.previousReading}"/><br/>
+        Present Reading (in kWh): <h:inputText value="#{electricCalculator.presentReading}"/><br/>
+      </fieldset>
+      <h:commandButton value="Calculate" action="#{electricCalculator.submit}"/>
+   </h:form>
+</h:body>
+</html>

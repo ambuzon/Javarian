@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+   <title>ENTJAVA - Lab Exercise 1</title>
+</h:head>
+<h:body>
+   <h1>Employee Health Plan</h1>
+   <h:form>
+      <fieldset>
+         <legend>Enter your student information</legend>
+         ID:<h:inputText value="#{employeeBean.employeeID}"/><br/>
+         Full Name:<h:inputText value="#{employeeBean.employeeName}"/><br/>
+         Health Plan:<h:inputText value="#{employeeBean.employeeHealthPlan}"/><br/>
+      </fieldset>
+      <h:commandButton value="Submit" action="#{employeeBean.submit}"/>
+   </h:form>
+</h:body>
+</html>

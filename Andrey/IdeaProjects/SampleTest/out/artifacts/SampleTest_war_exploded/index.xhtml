@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+   <title>Sorbetes</title>
+</h:head>
+<h:body>
+   <h1>Survey Test</h1>
+   <h:form>
+      <fieldset>
+        <legend>Select (1)One answer</legend>
+
+        a. How Knowledgeable am I in Java? <br/>
+          <h:selectOneMenu value="#{survey.answer1}">
+          <f:selectItems value="#{survey.ans1}"/>
+      </h:selectOneMenu> <br/>
+
+          b. How much do I know JSF? <br/>
+          <h:selectOneMenu value="#{survey.answer2}">
+          <f:selectItems value="#{survey.ans2}"/>
+      </h:selectOneMenu> <br/>
+
+          c. How willing am I to learn new languages and frameworks? <br/>
+          <h:selectOneMenu value="#{survey.answer3}">
+          <f:selectItems value="#{survey.ans3}"/>
+      </h:selectOneMenu> <br/>
+
+      </fieldset>
+      <h:commandButton value="Calculate" action="#{survey.submit}"/>
+   </h:form>
+</h:body>
+</html>
